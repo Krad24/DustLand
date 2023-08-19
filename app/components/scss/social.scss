@@ -1,0 +1,43 @@
+.social {
+  display: flex;
+  align-items: center;
+  
+  @include r($sm) {
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    @include r($sm) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 44px;
+    height: 44px;
+
+    @include r($sm) {
+      width: 51px;
+      height: 51px;
+    }
+  }
+
+  &__img {
+    opacity: 1;
+    transition: opacity .3s;
+
+    @include r($sm) {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      opacity: .4;
+    }
+  }
+}

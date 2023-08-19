@@ -1,0 +1,17 @@
+@import "reset";
+@import "mixins";
+@import "fonts";
+@import "vars";
+@import "libs";
+@import "global";
+
+@import "../components/scss/video-popup.scss";
+@import "../components/scss/logo.scss";
+@import "../components/scss/menu.scss";
+@import "../components/scss/social.scss";
+@import "../components/scss/burger.scss";
+@import "../components/scss/stock.scss";
+@import "../components/scss/regForm.scss";
+@import "pages/header.scss";
+@import "pages/index.scss";
+@import "pages/footer.scss";

@@ -1,0 +1,77 @@
+//Ограничение нескольких строк
+@mixin line-clamps($font-size, $line-height, $lines-to-show) {
+    @if unitless($line-height) == false {
+        $line-height: create-unitless-line-height($font-size, $line-height);
+    }
+
+    display: block; // Fallback for non-webkit browsers
+    display: -webkit-box;
+    font-size: $font-size + px;
+    max-height: ($font-size * $line-height * $lines-to-show) + px; // Fallback for non-webkit browsers
+    line-height: $line-height;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines-to-show;
+}
+
+//Ограничение одной строки
+@mixin line-clamp($lines: 1) {
+    @if $lines <=1 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    } @else {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: $lines;
+        -webkit-box-orient: vertical;
+    }
+}
+
+//для адаптива
+@mixin r($width) {
+    @media only screen and (max-width: ($width + "px")) {
+        @content;
+    }
+}
+
+@mixin v($height) {
+    @media only screen and (max-height: ($height + "px")) {
+        @content;
+    }
+}
+
+//Для псевдоэлементов
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+//для шрифтов
+@mixin font-face($font-family, $url, $weight) {
+    @font-face {
+      font-family: "#{$font-family}";
+      src: url('../fonts/#{$url}.woff2') format("woff2"),
+          url('../fonts/#{$url}.woff') format("woff");
+      font-weight: #{$weight};
+      font-display: swap;
+      font-style: normal;
+    }
+}
+
+//для картинок на бэкграунде
+@mixin bg ($position: center, $size: cover, $repeat: no-repeat) {
+    background-position: $position;
+    background-size: $size;
+    background-repeat: $repeat;
+}
+
+@mixin center () {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

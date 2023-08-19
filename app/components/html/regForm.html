@@ -1,0 +1,31 @@
+<div class="popup" id="popup" >
+  <div class="popup__content">
+    <button class="popup__close" type="button">
+      <svg class="popup__close-img" width="50" height="50">
+        <use xlink:href="images/sprite.svg#btnClose"></use>
+      </svg>
+    </button>
+    <form class="popup__form" action="#">
+      <div class="popup__form-inner">
+        <label class="popup__lable valid-ok">
+          <input class="popup__input popup__input--name" type="text" placeholder="Name" required>
+        </label>
+        <label class="popup__lable valid-not">
+          <input class="popup__input popup__input--number" type="text" placeholder="Phone" required>
+        </label>
+        <label class="popup__lable">
+          <input class="popup__input popup__input--email" type="email" placeholder="Email address" required>
+        </label>
+      </div>
+      <span class="popup__error">Email is in wrong format</span>
+      <label class="popup__lable-checkbox">
+        <input class="popup__input-checkbox" type="checkbox" required>
+        <span class="popup__checkbox"></span>
+        I agree to the terms of the <a href="#" target="_blank">privacy policy</a> and to receive newsletters
+      </label>
+      <button class="registration popup__btn" type="submit">
+        <span class="registration__link popup__btn-text">CONFIRM</span>
+      </button>
+    </form>
+  </div>
+</div>

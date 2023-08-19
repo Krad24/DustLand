@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body id="body">
+  <div class="wrapper">
+<header class="header">
+    <div class="container">
+      <nav class="header__nav">
+        <a class="logo header__logo" href="#">
+          <img class="logo__img" src="images/src/logo.svg" height="152" width="282" alt="logo">
+          <span class="sr-only">logo game</span>
+        </a>
+        <div class="header__nav-inner">
+          <svg class="header__nav-img" viewBox="0 0 863 50" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="50" width="862">
+            <path d="M837.293 0.5L861.793 25L837.293 49.5H25.7071L1.20711 25L25.7071 0.5H837.293Z" fill="#111214" stroke="#808692" stroke-linecap="round"/>
+          </svg>
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Home</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Game</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Features</a>
+            </li>
+            <li class="menu__item">
+              <div class="menu__link menu__lang">
+                <a class="menu__lang-active" href="#">Eng</a>
+                <span>/</span>
+                <a href="#">Uk</a>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Play the Beta</a>
+            </li>
+          </ul>
+        </div>
+        <button class="burger-btn" type="button">
+          <span class="burger-btn__span"></span>
+          <span class="sr-only">Open/Close menu</span>
+        </button>
+        <div class="burger">
+          <div class="burger__inner">
+            <ul class="menu burger__menu">
+              <li class="menu__item burger__item">
+                <a class="menu__link burger__link" href="#">Home</a>
+              </li>
+              <li class="menu__item burger__item">
+                <a class="menu__link burger__link" href="#">Game</a>
+              </li>
+              <li class="menu__item burger__item">
+                <a class="menu__link burger__link" href="#">Features</a>
+              </li>
+              <li class="menu__item burger__item">
+                <div class="menu__link menu__lang burger__link">
+                  <a class="menu__lang-active" href="#">Eng</a>
+                  <span>/</span>
+                  <a href="#">Uk</a>
+                </div>
+              </li>
+              <li class="menu__item burger__item">
+                <a class="menu__link burger__link" href="#">Play the Beta</a>
+              </li>
+            </ul>
+            <div class="burger__bottom">
+              <span class="burger__title">SOCIALS</span>
+              <ul class="social burger__social">
+                <li class="social__item">
+                  <a class="social__link burger__social-link" target="_blank" href="https://www.discord.com">
+                    <svg class="social__img" width="42" height="42">
+                      <use xlink:href="images/sprite.svg#discord"></use>
+                    </svg>
+                    <span class="sr-only">link to discord</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link burger__social-link" target="_blank" href="https://www.youtube.com">
+                    <svg class="social__img" width="42" height="42">
+                      <use xlink:href="images/sprite.svg#youtube"></use>
+                    </svg>
+                    <span class="sr-only">link to youtube</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link burger__social-link" target="_blank" href="https://www.facebook.com">
+                    <svg class="social__img" width="42" height="42">
+                      <use xlink:href="images/sprite.svg#facebook"></use>
+                    </svg>
+                    <span class="sr-only">link to facebook</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link burger__social-link" target="_blank" href="https://www.telegram.com">
+                    <svg class="social__img" width="42" height="42">
+                      <use xlink:href="images/sprite.svg#telegram"></use>
+                    </svg>
+                    <span class="sr-only">link to telegram</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link burger__social-link" target="_blank" href="https://www.twitter.com">
+                    <svg class="social__img" width="42" height="42">
+                      <use xlink:href="images/sprite.svg#twitter"></use>
+                    </svg>
+                    <span class="sr-only">link to twitter</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link burger__social-link" target="_blank" href="https://www.instagram.com">
+                    <svg class="social__img" width="42" height="42">
+                      <use xlink:href="images/sprite.svg#instagram"></use>
+                    </svg>
+                    <span class="sr-only">link to instagram</span>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link burger__social-link" target="_blank" href="https://www.reddit.com">
+                    <svg class="social__img" width="42" height="42">
+                      <use xlink:href="images/sprite.svg#reddit"></use>
+                    </svg>
+                    <span class="sr-only">link to reddit</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </nav>
+      <h1 class="header__title "><span>TRY TO</span>SURVIVE</h1>
+      <span class="header__text">Join the Beta Test Right Now and Win valuable prizes!</span>
+    </div>
+    <div class="header__items">
+      <div class="header__item header__item--social">
+        <span class="header__item-name">SOCIALS</span>
+        <ul class="social header__social">
+          <li class="social__item">
+            <a class="social__link" target="_blank" href="https://www.discord.com">
+              <svg class="social__img" width="42" height="42">
+                <use xlink:href="images/sprite.svg#discord"></use>
+              </svg>
+              <span class="sr-only">link to discord</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" target="_blank" href="https://www.youtube.com">
+              <svg class="social__img" width="42" height="42">
+                <use xlink:href="images/sprite.svg#youtube"></use>
+              </svg>
+              <span class="sr-only">link to youtube</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" target="_blank" href="https://www.facebook.com">
+              <svg class="social__img" width="42" height="42">
+                <use xlink:href="images/sprite.svg#facebook"></use>
+              </svg>
+              <span class="sr-only">link to facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" target="_blank" href="https://www.telegram.com">
+              <svg class="social__img" width="42" height="42">
+                <use xlink:href="images/sprite.svg#telegram"></use>
+              </svg>
+              <span class="sr-only">link to telegram</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" target="_blank" href="https://www.twitter.com">
+              <svg class="social__img" width="42" height="42">
+                <use xlink:href="images/sprite.svg#twitter"></use>
+              </svg>
+              <span class="sr-only">link to twitter</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" target="_blank" href="https://www.instagram.com">
+              <svg class="social__img" width="42" height="42">
+                <use xlink:href="images/sprite.svg#instagram"></use>
+              </svg>
+              <span class="sr-only">link to instagram</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" target="_blank" href="https://www.reddit.com">
+              <svg class="social__img" width="42" height="42">
+                <use xlink:href="images/sprite.svg#reddit"></use>
+              </svg>
+              <span class="sr-only">link to reddit</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__item header__item--registr">
+        <button class="header__item-btn" data-popup="reg">Register for Beta</button>
+      </div>
+      <div class="header__item header__item--data">February 21-23th, 2023</div>
+    </div>
+</header>
+
+<main>
+  <section class="stock">
+    <h2 class="sr-only">special offer to beta version</h2>
+    <div class="stock__inner">
+      <div class="stock__content">
+        <div class="stock__content-container">
+          <div class="stock__content-body">
+            <span class="stock__text">
+              Participate in the open beta test of the
+            </span>
+            <h3 class="stock__title">
+              Dust land
+              <span>game</span>
+            </h3>
+            <span class="stock__subtitle">
+              And get 1 Battle Pass and a «Tester» skin as a gift!
+            </span>
+            <p class="stock__event">
+              Spend the most hours in the game, share your apocalyptic experience with your friends via social media, using the hashtag #dustland and get a Steam Gift Card!
+            </p>
+            <p class="stock__prize">
+              The first 100 most active players will receive $20 Steam Gift Cards!
+            </p>
+            <button class="registration stock__reg" data-popup="reg">
+              <span class="registration__link">REGISTER NOW</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="stock__wrapper">
+        <picture><source srcset="images/dist/landscape.avif" type="image/avif"><source srcset="images/dist/landscape.webp" type="image/webp"><img class="stock__img" src="images/dist/landscape.jpg" alt="landscape" width="900" height="760"></picture>
+      </div>
+    </div>
+  </section>
+  <section class="about">
+    <div class="container">
+      <h2 class="section__title about__title">About Game</h2>
+      <p class="about__text">
+        DUSTLAND is a third-person looter-shooter. In the post-apocalyptic world, everyone has the only goal: to return alive after exploring the wasteland with as many valuable things as possible.
+        40 years ago a scientific catastrophe inflicted untold damage to the world. Now the planet is suffering from the unbearable boiling heat and all living creatures have either mutated or lost their sanity.
+      </p>
+      <a class="about__video" data-videotube href="https://www.youtube.com/watch?v=LY_KRvQfksk&ab_channel=Android%2CiOS%2CPCGameplay-PROAPK" style="background-image: url('images/dist/video.png');">
+        <span class="sr-only">Video about game</span>
+      </a>
+      <p class="about__text">
+        A few lucky survivors found shelter in the unfinished seed vault called 
+        “Yanmei”. They hope to give new birth to the world by clearing it of monsters and anomalies. One of the most dangerous world regions is called DUSTLAND. Around two miles of hostile burnt ground. Ferocious sandstorms,
+        recurrent anomalies and myriads of monsters… If mankind is destined to survive, people can’t but take up the challenge to clear this region.
+      </p>
+      <blockquote class="about__info">
+        Don't miss your chance to experience the heart-pumping excitement of Dustland.
+        Join the fight for survival today!
+      </blockquote>
+    </div>
+  </section>
+  <section class="features">
+    <div class="container">
+      <h2 class="section__title features__title">FEATURES</h2>
+    </div>
+    <div class="swiper features__slider">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide features__slide">
+          <div class="features__inner">
+            <picture><source srcset="images/dist/features/1.avif" type="image/avif"><source srcset="images/dist/features/1.webp" type="image/webp"><img class="features__img" src="images/dist/features/1.png" alt="baze" width="926" height="647"></picture>
+          </div>
+          <div class="features__content">
+            <div class="features__content-container">
+              <div class="features__content-body">
+                <h3 class="features__content-title">
+                  Decide on <br>
+                  <span>the ways</span>
+                </h3>
+                <p class="features__content-text">
+                  to achieve your mission goal. But be on your guard, as the shortest path isn’t always the easiest…Will you dare?
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="swiper-slide features__slide">
+          <div class="features__inner">
+            <picture><source srcset="images/dist/features/2.avif" type="image/avif"><source srcset="images/dist/features/2.webp" type="image/webp"><img class="features__img" src="images/dist/features/2.png" alt="weapon" width="984" height="816"></picture>
+          </div>
+          <div class="features__content">
+            <div class="features__content-container">
+              <div class="features__content-body">
+                <h3 class="features__content-title">
+                  Own a unique <br>
+                  <span>arsenal!</span>
+                </h3>
+                <p class="features__content-text">
+                  Use a weapon constructor to create super-powerful guns!
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="swiper-slide features__slide">
+          <div class="features__inner">
+            <picture><source srcset="images/dist/features/3.avif" type="image/avif"><source srcset="images/dist/features/3.webp" type="image/webp"><img class="features__img" src="images/dist/features/3.png" alt="monster" width="885" height="774"></picture>
+          </div>
+          <div class="features__content">
+            <div class="features__content-container">
+              <div class="features__content-body">
+                <h3 class="features__content-title">
+                  <span>Bewar</span> of
+                </h3>
+                <p class="features__content-text">
+                  mutants, deadly beasts, and hostile gangs, many of which are cannibalistic…
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="swiper-slide features__slide">
+          <div class="features__inner">
+            <picture><source srcset="images/dist/features/4.avif" type="image/avif"><source srcset="images/dist/features/4.webp" type="image/webp"><img class="features__img" src="images/dist/features/4.png" alt="solders" width="1038" height="803"></picture>
+          </div>
+          <div class="features__content">
+            <div class="features__content-container">
+              <div class="features__content-body">
+                <h3 class="features__content-title">
+                  Choose one from the four <br>
+                  <span>unique factions</span>
+                </h3>
+                <p class="features__content-text">
+                  each with its own territories, where players can safely trade and collaborate.
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="swiper-slide features__slide">
+          <div class="features__inner">
+            <picture><source srcset="images/dist/features/5.avif" type="image/avif"><source srcset="images/dist/features/5.webp" type="image/webp"><img class="features__img" src="images/dist/features/5.png" alt="building" width="1043" height="683"></picture>
+          </div>
+          <div class="features__content">
+            <div class="features__content-container">
+              <div class="features__content-body">
+                <h3 class="features__content-title">
+                  Enjoy the <br>
+                  <span>stunning</span><br>
+                  graphics
+                </h3>
+                <p class="features__content-text">
+                  that will allow you to fully experience the hostility of the surrounding environment
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="features__slider-pagination"></div>
+  </section>
+  <section class="immerse">
+    <div class="immerse__inner">
+      <h2 class="immerse__title">Immerse</h2>
+    </div>
+    <div class="immerse__wrapper">
+      <div class="container">
+        <blockquote class="immerse__info">
+          YOURSELF IN THE ATMOSPHERE OF THE POST-APOCALYPSE
+        </blockquote>
+        <button class="registration" data-popup="reg">
+          <span class="registration__link">REGISTER NOW</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <section class="requirements">
+    <div class="requirements__inner">
+      <div class="container">
+        <h2 class="section__title requirements__title">System Requirements</h2>
+        <table class="table requirements__table">
+          <thead class="table__thead">
+            <tr class="table__thead-tr">
+              <th class="table__thead-th table__thead-th--min requirements__thead-th requirements__thead-th--min">Minimum</th>
+              <th class="table__thead-th table__thead-th--normal requirements__thead-th requirements__thead-th--normal">Recommended</th>
+            </tr>
+          </thead>
+          <tbody class="table__tbody">
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td requirements__tbody-td">OS: Windows 10 64 Bit</td>
+              <td class="table__tbody-td requirements__tbody-td">OS: Windows 10 64 Bit</td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td requirements__tbody-td">Processor: Intel Core i5-4430 / AMD FX-6300</td>
+              <td class="table__tbody-td requirements__tbody-td">Processor: Intel Core i5-6600K / AMD Ryzen 5 1600</td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td requirements__tbody-td">RAM: 8 GB</td>
+              <td class="table__tbody-td requirements__tbody-td">RAM: 16 GB</td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td requirements__tbody-td">
+                Graphics Card: NVIDIA GeForce GTX 960 TI or AMD Radeon R7 370, with a minimum of 3GB of VRAM
+              </td>
+              <td class="table__tbody-td requirements__tbody-td">
+                Graphics Card: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 4GB
+              </td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td requirements__tbody-td">DirectX: Version 11</td>
+              <td class="table__tbody-td requirements__tbody-td">DirectX: Version 11</td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td requirements__tbody-td">Network: Broadband internet connection</td>
+              <td class="table__tbody-td requirements__tbody-td">Network: Broadband Internet connection</td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td requirements__tbody-td">Disk space: 50 GB</td>
+              <td class="table__tbody-td requirements__tbody-td">Disk space: 50 GB</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table">
+          <thead class="table__thead">
+            <tr class="table__thead-tr">
+              <th class="table__thead-th table__thead-th--min">Minimum</th>
+            </tr>
+          </thead>
+          <tbody class="table__tbody">
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td table__tbody-td--min">OS: Windows 10 64 Bit</td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td table__tbody-td--min">Processor: Intel Core i5-4430 / AMD FX-6300</td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td table__tbody-td--min">RAM: 8 GB</td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td table__tbody-td--min">
+                Graphics Card: NVIDIA GeForce GTX 960 TI or AMD Radeon R7 370, with a minimum of 3GB of VRAM
+              </td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td table__tbody-td--min">DirectX: Version 11</td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td table__tbody-td--min">Network: Broadband internet connection</td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td table__tbody-td--min">Disk space: 50 GB</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table">
+          <thead class="table__thead">
+            <tr class="table__thead-tr">
+              <th class="table__thead-th table__thead-th--normal">Recommended</th>
+            </tr>
+          </thead>
+          <tbody class="table__tbody">
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td table__tbody-td--normal">OS: Windows 10 64 Bit</td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td table__tbody-td--normal">Processor: Intel Core i5-6600K / AMD Ryzen 5 1600</td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td table__tbody-td--normal">RAM: 16 GB</td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td table__tbody-td--normal">
+                Graphics Card: NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 4GB
+              </td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td table__tbody-td--normal">DirectX: Version 11</td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td table__tbody-td--normal">Network: Broadband Internet connection</td>
+            </tr>
+            <tr class="table__tbody-tr">
+              <td class="table__tbody-td table__tbody-td--normal">Disk space: 50 GB</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div class="stock requirements__info">
+      <div class="stock__inner">
+        <div class="stock__content">
+          <div class="stock__content-container">
+            <div class="stock__content-body requirements__info-body">
+              <h3 class="requirements__info-title">
+                Don’t miss <span>Dustland</span>
+              </h3>
+              <span class="requirements__info-subtitle">
+                open beta test!
+              </span>
+              <p class="stock__event requirements__info-event">
+                Only February 21-23th, 2023
+              </p>
+              <p class="stock__prize requirements__info-prize">
+                Register Now and Win valuable prizes!
+              </p>
+              <button class="registration" data-popup="reg">
+                <span class="registration__link">REGISTER</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="stock__wrapper requirements__info-wrapper">
+          <picture><source srcset="../images/dist/game-photo.avif" type="image/avif"><source srcset="../images/dist/game-photo.webp" type="image/webp"><img class="stock__img requirements__info-img" src="../images/dist/game-photo.jpg" alt="game location" width="900" height="760"></picture>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <dl class="requirements__list">
+        <div class="requirements__list-inner">
+          <dt class="requirements__list-title">Classification:</dt>
+          <dd class="requirements__list-desr">AAA</dd>
+        </div>
+        <div class="requirements__list-inner">
+          <dt class="requirements__list-title">Game engine:</dt>
+          <dd class="requirements__list-desr">UE5</dd>
+        </div>
+        <div class="requirements__list-inner">
+          <dt class="requirements__list-title">Supported system:</dt>
+          <dd class="requirements__list-desr">PC</dd>
+        </div>
+        <div class="requirements__list-inner">
+          <dt class="requirements__list-title">Status:</dt>
+          <dd class="requirements__list-desr">Beta</dd>
+        </div>
+        <div class="requirements__list-inner">
+          <dt class="requirements__list-title">Developer:</dt>
+          <dd class="requirements__list-desr">RedPad Games</dd>
+        </div>
+        <div class="requirements__list-inner">
+          <dt class="requirements__list-title">Name:</dt>
+          <dd class="requirements__list-desr">Dustland</dd>
+        </div>
+        <div class="requirements__list-inner">
+          <dt class="requirements__list-title">Genre:</dt>
+          <dd class="requirements__list-desr">MMO/Action/Survival</dd>
+        </div>
+        <div class="requirements__list-inner">
+          <dt class="requirements__list-title">Setting:</dt>
+          <dd class="requirements__list-desr">Post-Apocalypse</dd>
+        </div>
+      </dl>
+    </div>
+  </section> 
+  <section class="release">
+    <div class="container">
+      <h2 class="release__title">
+        DUSTLAND <br> Release
+      </h2>
+      <span class="release__info">Coming in <time datetime="2023-06-03 00:00">May, 2023</time></span>
+      <button class="registration release__registration" data-popup="reg">
+        <span class="registration__link release__registration-link">REGISTER NOW</span>
+      </button>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+
+  <div class="container">
+
+    <ul class="social footer__social">
+
+      <li class="social__item">
+
+        <a class="social__link" target="_blank" href="https://www.discord.com">
+
+          <svg class="social__img" width="42" height="42">
+
+            <use xlink:href="images/sprite.svg#discord"></use>
+
+          </svg>
+
+          <span class="sr-only">link to discord</span>
+
+        </a>
+
+      </li>
+
+      <li class="social__item">
+
+        <a class="social__link" target="_blank" href="https://www.youtube.com">
+
+          <svg class="social__img" width="42" height="42">
+
+            <use xlink:href="images/sprite.svg#youtube"></use>
+
+          </svg>
+
+          <span class="sr-only">link to youtube</span>
+
+        </a>
+
+      </li>
+
+      <li class="social__item">
+
+        <a class="social__link" target="_blank" href="https://www.facebook.com">
+
+          <svg class="social__img" width="42" height="42">
+
+            <use xlink:href="images/sprite.svg#facebook"></use>
+
+          </svg>
+
+          <span class="sr-only">link to facebook</span>
+
+        </a>
+
+      </li>
+
+      <li class="social__item">
+
+        <a class="social__link" target="_blank" href="https://www.telegram.com">
+
+          <svg class="social__img" width="42" height="42">
+
+            <use xlink:href="images/sprite.svg#telegram"></use>
+
+          </svg>
+
+          <span class="sr-only">link to telegram</span>
+
+        </a>
+
+      </li>
+
+      <li class="social__item">
+
+        <a class="social__link" target="_blank" href="https://www.twitter.com">
+
+          <svg class="social__img" width="42" height="42">
+
+            <use xlink:href="images/sprite.svg#twitter"></use>
+
+          </svg>
+
+          <span class="sr-only">link to twitter</span>
+
+        </a>
+
+      </li>
+
+      <li class="social__item">
+
+        <a class="social__link" target="_blank" href="https://www.instagram.com">
+
+          <svg class="social__img" width="42" height="42">
+
+            <use xlink:href="images/sprite.svg#instagram"></use>
+
+          </svg>
+
+          <span class="sr-only">link to instagram</span>
+
+        </a>
+
+      </li>
+
+      <li class="social__item">
+
+        <a class="social__link" target="_blank" href="https://www.reddit.com">
+
+          <svg class="social__img" width="42" height="42">
+
+            <use xlink:href="images/sprite.svg#reddit"></use>
+
+          </svg>
+
+          <span class="sr-only">link to reddit</span>
+
+        </a>
+
+      </li>
+
+    </ul>
+
+    <ul class="footer__menu">
+
+      <li class="footer__menu-item">
+
+        <a class="footer__menu-link" href="#" target="_blank">Terms of use</a>
+
+      </li>
+
+      <li class="footer__menu-item">
+
+        <a class="footer__menu-link" href="#" target="_blank">Cookies</a>
+
+      </li>
+
+      <li class="footer__menu-item">
+
+        <a class="footer__menu-link" href="#" target="_blank">Privacy Policy</a>
+
+      </li>
+
+      <li class="footer__menu-item">
+
+        <a class="footer__menu-link" href="#" target="_blank">Press</a>
+
+      </li>
+
+      <li class="footer__menu-item">
+
+        <a class="footer__menu-link" href="#" target="_blank">Contact us</a>
+
+      </li>
+
+    </ul>
+
+    <blockquote class="footer__blackquote">
+
+      <p>© 2023 RedPad Games and Dustland are trademarks of RedPad Games AG</p>
+
+      <p>®. All other t﻿rademarks and trade names are the property of their respective owners</p>
+
+    </blockquote>
+
+  </div>
+
+</footer>
+<div class="popup" id="popup" >
+  <div class="popup__content">
+    <button class="popup__close" type="button">
+      <svg class="popup__close-img" width="50" height="50">
+        <use xlink:href="images/sprite.svg#btnClose"></use>
+      </svg>
+    </button>
+    <form class="popup__form" action="#">
+      <div class="popup__form-inner">
+        <label class="popup__lable valid-ok">
+          <input class="popup__input popup__input--name" type="text" placeholder="Name" required>
+        </label>
+        <label class="popup__lable valid-not">
+          <input class="popup__input popup__input--number" type="text" placeholder="Phone" required>
+        </label>
+        <label class="popup__lable">
+          <input class="popup__input popup__input--email" type="email" placeholder="Email address" required>
+        </label>
+      </div>
+      <span class="popup__error">Email is in wrong format</span>
+      <label class="popup__lable-checkbox">
+        <input class="popup__input-checkbox" type="checkbox" required>
+        <span class="popup__checkbox"></span>
+        I agree to the terms of the <a href="#" target="_blank">privacy policy</a> and to receive newsletters
+      </label>
+      <button class="registration popup__btn" type="submit">
+        <span class="registration__link popup__btn-text">CONFIRM</span>
+      </button>
+    </form>
+  </div>
+</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+</html>
+

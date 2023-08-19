@@ -1,0 +1,428 @@
+.popup {
+  background-color: transparent;
+  transition: background-color .5s;
+  padding: 0 15px;
+  
+  &--active {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(8, 6, 6, 0.5);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+    
+    .popup__content {
+      transform: perspective(600px) translate(0, 0) rotateX(0deg);
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    max-width: 500px;
+    width: 100%;
+    padding: 50px;
+    font-family: Montserrat;
+    text-align: center;
+    background-color: #22252B;
+    color: var(--white);
+    position: relative;
+    z-index: 5;
+    transform: perspective(600px) translate(0, -100%) rotateX(45deg);
+    opacity: 0;
+    transition: transform .8s, opacity .8s;
+
+    @include r($md) {
+      padding: 26px;
+    }
+
+    @include v($_480) {
+      padding: 26px 30px 20px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    stroke: #C3B9B5;
+    transition: stroke .5s;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+
+    &:hover {
+      stroke: #080606;
+    }
+
+    @include r($md) {
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    @include v($_480) {
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  &__form {
+    min-height: 445px;
+    display: flex;
+    flex-direction: column;
+
+    @include r($md) {
+      min-height: 312px;
+    }
+
+    @include v($_480) {
+      min-height: 290px;
+    }
+  }
+
+  &__form-inner {
+    margin-bottom: 40px;
+
+    @include r($md) {
+      margin-bottom: 24px;
+    }
+
+    @include v($_480) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__lable {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    color: #bac42f;
+
+    &::before {
+      @include pseudo;
+      right: 20px;
+      top: 0;
+      bottom: 0;
+      width: 22px;
+      height: 22px;
+      margin: auto 0;
+      @include bg;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+
+    &.valid-ok {
+      
+      color: #00D9A5;
+
+      &::before {
+        background-image: url("../images/dist/icon/bird.svg");
+      }
+
+      .popup__input {
+        border-color: #00D9A5;
+      }
+    }
+
+    &.valid-not {
+      color: #D90034;
+
+      &::before {
+        background-image: url("../images/dist/icon/cross.svg");
+      }
+
+      .popup__input {
+        border-color: #D90034;
+      }
+    }
+
+    @include r($md) {
+      &::before {
+        right: 12px;
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    @include v($_480) {
+      &::before {
+        right: 12px;
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  &__input {
+    padding: 20px 55px 20px 20px;
+    display: block;
+    background-color: #111214;
+    width: 100%;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--white);
+    border: 1px solid #AEB5C5;
+    transition: border-color .3s;
+    
+    &::placeholder {
+      color: #808692;
+      font-family: Montserrat;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    &:focus {
+      border-color: #FE8F3F;
+    }
+
+    @include r($md) {
+      font-size: 12px;
+      padding: 12px 36px 12px 12px;
+
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+
+    @include v($_480) {
+      font-size: 12px;
+      padding: 12px 36px 12px 12px;
+
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__error {
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+
+    &::before {
+      @include pseudo;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 30px;
+      background-image: url("../images/dist/icon/subtract.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      filter: drop-shadow(0px 0px 15px rgba(217, 0, 52, 0.30));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    @include r($md) {
+      font-size: 12px;
+      line-height: 1;
+      margin-bottom: 15px;
+      padding-left: 30px;
+
+      &::before {
+        width: 20px;
+      }
+    }
+
+    @include v($_480) {
+      font-size: 12px;
+      line-height: 1;
+      margin-bottom: 15px;
+      padding-left: 30px;
+
+      &::before {
+        width: 20px;
+      }
+    }
+  }
+
+  &__lable-checkbox {
+    display: block;
+    margin: 0 0 40px 40px;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: inherit;
+    text-transform: lowercase;
+    text-align: left;
+    position: relative;
+
+    a {
+      color: #FE8F3F;
+    }
+
+    @include r($md) {
+      margin: 0 0 15px 30px;
+      font-size: 12px;
+    }
+
+    @include v($_480) {
+      margin: 0 0 15px 30px;
+      font-size: 12px;
+    }
+  }
+  
+  &__input-checkbox {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+    padding-left: 40px;
+  
+    &:checked+.popup__checkbox {
+      &::before {
+        @include pseudo;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 18px;
+        height: 18px;
+        margin: auto;
+        background-color: #FE8F3F;
+      }
+    }
+
+    @include r($md) {
+      padding-left: 30px;
+
+      &:checked+.popup__checkbox {
+        &::before {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+    
+    @include v($_480) {
+      padding-left: 30px;
+
+      &:checked+.popup__checkbox {
+        &::before {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+  
+  &__checkbox {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto -40px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border: 1px solid var(--white);
+
+    @include r($md) {
+      margin: auto 0 auto -30px;
+      width: 20px;
+      height: 20px;
+    }
+
+    @include v($_480) {
+      margin: auto 0 auto -30px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__btn {
+    align-self: center;
+    min-width: 316px;
+    margin-top: auto;
+    background: 
+      linear-gradient(135deg, transparent 22px, #808692 0) top left,
+      linear-gradient(225deg, transparent 22px, #808692 0) top right,
+      linear-gradient(45deg, transparent 22px, #808692 0) bottom left,
+      linear-gradient(-45deg, transparent 22px, #808692 0) bottom right;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+
+    &--active {
+      background: 
+        linear-gradient(135deg, transparent 22px, #FF8126 0) top left,
+        linear-gradient(225deg, transparent 22px, #FF8126 0) top right,
+        linear-gradient(45deg, transparent 22px, #FF8126 0) bottom left,
+        linear-gradient(-45deg, transparent 22px, #FF8126 0) bottom right;
+      background-size: 51% 51%;
+      background-repeat: no-repeat;
+
+      .popup__btn-text {
+        background-color: #FF8E3D;
+        box-shadow: 0 4px 100px 0 #FF8E3D;
+      }
+    }
+
+    &:hover {
+      .popup__btn-text {
+        box-shadow: 0 4px 100px 0 #00D9A5;
+      }
+    }
+
+    &.animate {
+      animation: none;
+    }
+
+    @include r($md) {
+      min-width: 190px;
+    }
+
+    @include v($_480) {
+      min-width: 190px;
+    }
+  }
+
+  &__btn-text {
+    padding: 20px 16px 20px 18px;
+    display: block;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    color: var(--white);
+    background-color: #808692;
+    box-shadow: none;
+
+    @include r($md) {
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+
+    @include v($_480) {
+      font-size: 14px;
+      padding: 10px 12px;
+    }
+  }
+}

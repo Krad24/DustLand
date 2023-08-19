@@ -1,0 +1,239 @@
+.burger {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 430px;
+  width: 100%;
+  height: 100vh;
+  padding: 145px 30px 80px;
+  filter: drop-shadow(0 4px 150px rgba(0, 0, 0, .7));
+  background: 
+    linear-gradient(135deg, transparent 20px, #FE8F3F 0) top left;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transform: translateX(300%);
+  transition: transform .5s;
+  z-index: 5;
+
+
+  &--active {
+    transform: translateX(0%);
+  }
+
+  @include r($xl) {
+    display: block;
+  }
+
+  @include r($sm) {
+    padding: 110px 30px 40px;
+    max-width: 312px;
+  }
+
+  @include v($_640) {
+    padding: 90px 30px 20px;
+  }
+
+  &__inner {
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+    
+  &__menu {
+    display: block;
+    height: auto;
+    overflow: visible;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 0;
+    margin-bottom: 50px;
+
+    @include r($sm) {
+      margin-bottom: 30px;
+    }
+
+    @include v($_480) {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    box-shadow: none;
+    position: relative;
+
+    &::before {
+      @include pseudo;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      filter: drop-shadow(0 4px 30px #FFF);
+      height: 2px;
+      background-color: #FFF;
+      margin: auto 0;
+      z-index: -1;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    @include v($_480) {
+      &:not(:last-child) {
+        margin-bottom: 7px;
+      }
+    }
+  }
+
+  &__link {
+    animation: none;
+    padding: 5px 21px 5px 0 !important;
+    display: inline-block;
+    background-color: #FE8F3F;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: none !important;
+      border: none;
+    }
+
+    &::before {
+      content: none !important;
+      background-image: none;
+    }
+  }
+
+  &__title {
+    display: block;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+    @include v($_480) {
+      font-size: 20px;
+    }
+  }
+
+  &__social-link {
+    @include v($_480) {
+      width: 44px;
+      height: 44px;
+    }
+  }
+}
+
+.burger-btn {
+  display: none;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  z-index: 6;
+  background: 
+    linear-gradient(225deg, transparent 6px, #FE8F3F 0) top right,
+    linear-gradient(45deg, transparent 6px, #FE8F3F 0) bottom left;
+  background-size: 60%;
+  background-repeat: no-repeat;
+
+  &::before, &::after {
+    @include pseudo;
+    height: 2px;
+    background-color: var(--white);
+    width: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  &::before {
+    top: 18px;
+  }
+
+  &::after {
+    bottom: 18px;
+  }
+    
+  &__span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--white);
+    margin: auto;
+  }
+
+  &.burger-btn--close {
+    background: 
+      linear-gradient(225deg, transparent 6px, #FFF 0) top right,
+      linear-gradient(45deg, transparent 6px, #FFF 0) bottom left;
+    background-size: 60%;
+    background-repeat: no-repeat;
+
+    &::before, &::after {
+      background-color: #FE8F3F;
+    }
+
+    span {
+      background-color: #FE8F3F;
+    }
+  }
+
+  @include r($xl) {
+    display:block;
+  }
+
+  @include r($sm){
+    width: 44px;
+    height: 44px;
+
+    &::before, &::after {
+      width: 20px;
+    }
+
+    &::before {
+      top: 11px;
+    }
+
+    &::after {
+      bottom: 11px;
+    }
+
+    span {
+      width: 20px;
+    }
+  }
+
+  @include v($_640) {
+    &.burger-btn--close {
+      top: -30px;
+      right: -10px;
+      width: 44px;
+      height: 44px;
+
+      &::before, &::after {
+        width: 20px;
+      }
+
+      &::before {
+        top: 11px;
+      }
+
+      &::after {
+        bottom: 11px;
+      }
+
+      span {
+        width: 20px;
+      }
+    }
+  }
+}
+

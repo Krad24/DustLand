@@ -1,0 +1,105 @@
+.footer {
+  padding: 60px 0 100px;
+  box-shadow: 0 0 250px rgba(0, 0, 0, .2);
+  text-align: center;
+
+  @include r($md) {
+    padding: 50px 0;
+  }
+
+  @include r($sm) {
+    padding: 30px 0;
+  }
+
+  &__social {
+    justify-content: center;
+    margin-bottom: 48px;
+
+    @include r($md) {
+      margin-bottom: 32px;
+    }
+
+    @include r($sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__menu {
+    margin-bottom: 32px;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 26px;
+    line-height: 1.1;
+    display: flex;
+    justify-content: center;
+    
+    @include r($xl) {
+      display: block;
+    }
+
+    @include r($sm) {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__menu-item:not(:last-child) {
+    padding-right: 18px;
+    margin-right: 10px;
+    position: relative;
+
+    &::before {
+      content: '|';
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    @include r($xl) {
+      padding: 0;
+      margin-right: 0;
+
+      &::before {
+        content: '';
+      }
+    }
+  }
+
+  &__menu-link {
+    transition: color .4s;
+
+    &:hover {
+      color: var(--orange);
+    }
+
+    @include r($xl) {
+      display: block;
+      padding: 7px 0;
+    }
+
+    @include r($md) {
+      font-size: 20px;
+    }
+
+    @include r($sm) {
+      font-size: 16px;
+      text-align: left;
+    }
+  }
+
+  &__blackquote {
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    @include r($lg) {
+      p:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+
+    @include r($md) {
+      font-size: 16px;
+    }
+  }
+}

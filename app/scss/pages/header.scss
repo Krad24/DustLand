@@ -1,0 +1,187 @@
+.header {
+  position: relative;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+
+    @include r($sm) {
+      padding: 30px 0;
+    }
+  }
+
+  &__nav-inner {
+    position: relative; 
+    flex-shrink: 0;
+
+    @include r($xl) {
+      display: none;
+    }
+  }
+
+  &__nav-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &__logo {
+    margin-right: 30px;
+    flex-shrink: 1;
+  }
+
+  &__title {
+    font-weight: 800;
+    text-align: center;
+    font-size: 96px;
+    line-height: 0.9;
+    margin: 17vh 0 24vh;
+    animation: zoomIn 1s ease-out;
+
+    span {
+      display: block;
+      color: var(--orange);
+    }
+
+    @include r($xl) {
+      font-size: 74px;
+      margin: 13vh 0 19vh;
+    }
+
+    @include r($lg) {
+      font-size: 52px;
+      margin: 10vh 0 14vh;
+    }
+
+    @include r($sm) {
+      margin: 50px 0 80px;
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+    display: block;
+    max-width: 520px;
+    font-size: 26px;
+    margin: 0 auto 17px;
+    text-align: center;
+    animation: bounceInUp 1s;
+
+    @include r($xl) {
+      font-size: 20px;
+    }
+
+    @include r($sm) {
+      font-size: 14px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    animation: fadeInUp 1s ease;
+    text-align: center;
+
+    @include r($xl) {
+      display: block;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    padding: 38px;
+    font-size: 36px;
+
+    &:not(:last-child) {
+      margin-right: 14px;
+    }
+
+    &--social {
+      background: linear-gradient(225deg, transparent 25px, #22252B 0);
+      
+      @include r($xxxl) {
+        display: block;
+
+        span {
+          display: block;
+          margin-bottom: 10px;
+        }
+      }
+
+      @include r($xl) {
+        display: none;
+      }
+    }
+
+    &--data {
+      background: linear-gradient(135deg, transparent 25px, #22252B 0);
+
+      @include r($xl) {
+        background-color: #22252B;
+      }
+
+    }
+
+    &--registr {
+      background: 
+        linear-gradient(135deg, transparent 25px, #FF8126 0) top left,
+        linear-gradient(225deg, transparent 25px, #FF8126 0) top right;
+      background-size: 60%;
+      background-repeat: no-repeat;
+
+      @include r($sm) {
+        background: 
+        linear-gradient(135deg, transparent 15px, #FF8126 0) top left,
+        linear-gradient(225deg, transparent 15px, #FF8126 0) top right;
+      background-size: 60%;
+      background-repeat: no-repeat;
+      }
+    }
+
+    @include r($xxl) {
+      font-size: 28px;
+      padding: 15px;
+    }
+
+    @include r($xl) {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+
+    @include r($sm) {
+      font-size: 20px;
+      padding: 22px 15px;
+    }
+  }
+
+  &__item-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-btn {
+    transition: color .4s;
+    text-transform: uppercase;
+    color: var(--white);
+
+    &:hover {
+      color: #22252b;
+    }
+  }
+
+  &__social {
+    margin-left: 20px;
+  }
+}
+
+
+

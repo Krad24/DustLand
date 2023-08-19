@@ -1,0 +1,286 @@
+.stock {
+  padding: 150px 0;
+  position: relative;
+  background-color: #22252B;
+
+  @include r($xl) {
+    padding: 100px 0 0;
+  }
+
+  @include r($lg) {
+    padding-top: 60px;
+  }
+
+  @include r($sm) {
+    padding-top: 40px;
+  }
+  
+  &::before {
+    @include pseudo;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: url("../images/dist/stock__bg.png"), lightgray 0 -110.5px / 100% 120.755%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: color-burn;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__content-container {
+    max-width: 1380px;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+    overflow-wrap: anywhere;
+  }
+
+  &__content-body {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    @include r($xl) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 24px;
+    display: block;
+    line-height: .9;
+    margin-bottom: 16px;
+
+    @include r($lg) {
+      font-size: 20px;
+    }
+
+    @include r($sm) {
+      font-size: 14px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    font-family: Syne;
+    text-shadow: 0 0 100px 0 rgba(var(--white), .4);
+    font-size: 55px;
+    line-height: .9;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 25px;
+
+    span {
+      margin-top: 2px;
+      display: block;
+      font-size: 124px;
+    }
+
+    @include r($xxl) {
+      span {
+        font-size: 96px;
+      }
+    }
+
+    @include r($lg) {
+      text-shadow: 0 0 66px rgba(var(--white), .4);
+      font-size: 36px;
+
+      span {
+        font-size: 74px;
+      }
+    }
+
+    @include r($sm) {
+      text-shadow: 0 0 46px rgba(var(--white), .4);
+      font-size: 24px;
+      margin-bottom: 10px;
+
+      span {
+        font-size: 48px;
+      }
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include r($lg) {
+      font-size: 20px;
+    }
+
+    @include r($sm) {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__event {
+    max-width: 100%;
+    width: 100%;
+    padding: 36px;
+    font-variant-numeric: lining-nums proportional-nums;
+    backdrop-filter: blur(25px);
+    background: linear-gradient(135deg, transparent 15px, rgba(#000, .5) 0);
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 24px;
+    word-break: break-word;
+
+    @include r($lg) {
+      font-size: 16px;
+    }
+
+    @include r($sm) {
+      padding: 21px 16px;
+      font-size: 12px;
+      margin-bottom: 11px;
+    }
+  }
+
+  &__prize {
+    max-width: 100%;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 500;
+    font-variant-numeric: lining-nums proportional-nums;
+    padding: 36px 160px 36px 36px;
+    position: relative;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, transparent 15px, #4E525A 0);
+    word-break: break-word;
+
+    &::before {
+      @include pseudo;
+      bottom: 0;
+      right: -19px;
+      width: 164px;
+      height: 123px;
+      background-image: url("../images/dist/card.png");
+      @include bg;
+    }
+
+    @include r($lg) {
+      padding: 36px 120px 36px 36px;
+      font-size: 16px;
+      min-height: 54px;
+
+      &::before {
+        right: -10px;
+        width: 120px;
+        height: 96px;
+      }
+    }
+
+    @include r($sm) {
+      padding: 15px 110px 15px 16px;
+      font-size: 12px;
+      margin-bottom: 30px;
+
+      &::before {
+        right: 2px;
+        width: 100px;
+        height: 77px;
+      }
+    }
+  }
+
+  &__wrapper {
+    width: 50%;
+    margin-left: auto;
+    padding-left: 60px; 
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    &::before {
+      @include pseudo;
+      right: 0;
+      top: 0;
+      bottom: -150px;
+      left: -110px;
+      background-image: url("../images/dist/solder.png");
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      background-size: contain;
+    }
+
+    @include r($xxl) {
+      padding-left: 40px;
+
+      &::before {
+        left: -60px;
+      }
+    }
+
+    @include r($xl) {
+      margin-top: 14px;
+      padding: 30px 0 0;
+      position: relative;
+      width: 100%;
+
+      &::before {
+        bottom: 0;
+        background-position: right bottom;
+        background-size: contain;
+      }
+    }
+
+    @include r($lg) {
+      &::before {
+        background-position: center;
+      }
+    }
+
+    @include r($sm) {
+      &::before {
+        left: -30px;
+      }
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: center bottom;
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    max-height: 760px;
+
+    @include r($xl) {
+      max-width: 100%;
+    }
+
+    @include r($lg) {
+      height: auto;
+      max-height: 100%;
+    }
+
+    @include v($_640) {
+      height: auto;
+      max-height: 420px;
+    }
+  }
+
+  &__reg {
+    position: relative;
+    z-index: 2;
+  }
+}
