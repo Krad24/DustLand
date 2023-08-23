@@ -181,4 +181,6 @@ const init = () => {
   document.addEventListener('click', openVideoTubeModal);
 };
 
+document.addEventListener('DOMContentLoaded', init);
+
 // Добавляем на ссылку с видео data-videotube 

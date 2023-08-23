@@ -16,7 +16,6 @@
   transition: transform .5s;
   z-index: 5;
 
-
   &--active {
     transform: translateX(0%);
   }
@@ -36,7 +35,7 @@
 
   &__inner {
     height: 100%;
-    overflow: auto;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
