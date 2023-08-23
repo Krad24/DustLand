@@ -336,7 +336,24 @@
   }
 
   &__img {
-    object-fit: cover;
+    object-fit: contain;
+
+    @include r($xl) {
+      max-height: 700px;
+    }
+
+    @include r($md) {
+      max-height: 500px;
+    }
+
+    @include r($md) {
+      max-height: 500px;
+    }
+
+    @include r($_480) {
+      object-fit: scale-down;
+      max-height: 300px;
+    }
   }
 
   &__content {
@@ -515,7 +532,15 @@
       margin-bottom: 30px;
 
       &::after {
-        height: 23vh;
+        height: 24vh;
+      }
+    }
+
+    @include v($_640) {
+      min-height: 80vh;
+
+      &::after {
+        height: 45vh;
       }
     }
 
@@ -546,6 +571,10 @@
 
     @include r($md) {
       bottom: 21vh;
+    }
+
+    @include v($_640) {
+      bottom: 41vh;
     }
 
     @include v($_480) {
