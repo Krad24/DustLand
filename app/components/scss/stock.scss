@@ -222,6 +222,12 @@
       background-size: contain;
     }
 
+    &.animate {
+      &::before {
+        animation: fadeIn 2s;
+      }
+    }
+
     @include r($xxl) {
       padding-left: 40px;
 
@@ -270,12 +276,20 @@
 
     @include r($lg) {
       height: auto;
-      max-height: 100%;
+      max-height: 540px;
     }
 
     @include v($_640) {
       height: auto;
       max-height: 420px;
+    }
+
+    @include v($_480) {
+      max-height: 300px;
+    }
+
+    @include r($sm) {
+      max-height: 300px;
     }
   }
 

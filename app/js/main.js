@@ -66,6 +66,20 @@ regBtns.forEach((regBtn) => {
   }
 })
 
+//animation stock__wrapper bg-img
+
+const bgImgs = document.querySelectorAll('.stock__wrapper');
+
+console.log(bgImgs)
+
+bgImgs.forEach((bgImg) => {
+  if(bgImg) {
+    window.addEventListener('scroll', () => {
+      animOnScroll(bgImg, 'animate');
+    })
+  }
+})
+
 //animation begin
 
 function animOnScroll(item, activeClass, ...allElements) {
